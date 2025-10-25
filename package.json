@@ -1,0 +1,20 @@
+{
+  "name": "hola-mundo-js",
+  "version": "1.0.0",
+  "description": "Proyecto sencillo Hola Mundo en JavaScript con pruebas automatizadas",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "hola-mundo",
+    "javascript",
+    "jest"
+  ],
+  "author": "Brandon Alejandro Serna Pérez",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
