@@ -1,0 +1,38 @@
+name: CI - Hola Mundo JS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+    
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+     
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run app
+        run: npm start
+
+      
+      - name: Run tests
+        run: npm test
+
+     
+      - name: Show test results
+        if: always()
+        run: echo "✅ Pipeline ejecutado correctamente"

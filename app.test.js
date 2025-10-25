@@ -1,4 +1,4 @@
-// app.test.js
+
 const sayHello = require('./app');
 
 test('debe devolver un saludo con el nombre', () => {
