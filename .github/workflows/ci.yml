@@ -11,28 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
       - name: Checkout repository
         uses: actions/checkout@v3
 
-    
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-     
       - name: Install dependencies
         run: npm install
 
+      # Ejecutar app (opcional)
       - name: Run app
-        run: npm start
+        run: node app.js
 
-      
+      # Ejecutar pruebas
       - name: Run tests
-        run: npm test
-
-     
-      - name: Show test results
-        if: always()
-        run: echo "✅ Pipeline ejecutado correctamente"
+        run: npx jest --verbose
