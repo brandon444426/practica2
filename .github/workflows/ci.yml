@@ -22,10 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Ejecutar app (opcional)
+      
       - name: Run app
         run: node app.js
 
-      # Ejecutar pruebas
+      
       - name: Run tests
         run: npx jest --verbose
